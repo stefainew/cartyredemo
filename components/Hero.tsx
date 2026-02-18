@@ -1,4 +1,5 @@
 import React from 'react';
+import heroCar from '@/assets/hero-car.jpg';
 
 const Hero: React.FC = () => {
   return (
@@ -6,7 +7,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 industrial-grid opacity-20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Text Content */}
           <div className="text-white">
             <h1 className="hero-title font-display text-5xl md:text-7xl font-black uppercase mb-6">
@@ -16,7 +17,7 @@ const Hero: React.FC = () => {
               Диагностика • баланс • сезонна смяна • лепене • джанти.{' '}
               <span className="text-white font-bold text-primary">Работим и събота.</span>
             </p>
-            
+
             <div className="flex flex-wrap gap-4 mb-12">
               <a
                 href="tel:0899000000"
@@ -59,16 +60,20 @@ const Hero: React.FC = () => {
 
           {/* Image Content */}
           <div className="relative">
-            <div className="relative z-10 border-8 border-white/5 p-2 bg-white/5">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeUwSE9lpH6-lWGnzN54e3eZSlY7cEre4_1yI19nlVv6ATfsU_rvLTwkcDkRZ2XiRxEkDKHP2WjgZynb6pk65K669_-MaygL-RXS367Sw-99RB-frmuFjfOQYLca6j7MpzrfbJynWwQY5tHU8VYA3Ctohdu-HcJY4LCEpkI_hc_GO1m70ZULDgCFB_5uRcDhZ_X18oRObyrIBdFNtrDzcjVOydsbe7ztjCBQyTOb7-mtgONejU5D5VhV2QU1rixDo66NykFXdCmTtj"
-                alt="Професионален сервиз за гуми"
-                className="w-full h-[500px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                src={heroCar}
+                alt="Tire service vehicle"
+                className="w-full h-[500px] lg:h-[700px] object-cover object-center"
+                loading="eager"
+                decoding="async"
+                style={{ imageRendering: 'high-quality' as any }}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-primary p-8 hidden md:block">
+            <div className="absolute -bottom-6 -left-6 bg-primary p-8 hidden md:block rounded-xl shadow-lg border border-white/10">
               <span className="text-white font-display text-4xl font-black italic uppercase">
-                EXPERTS.
+                ЕКСПЕРТИ.
               </span>
             </div>
           </div>

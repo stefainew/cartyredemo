@@ -15,27 +15,27 @@ const Navbar: React.FC = () => {
               <span className="text-primary font-black text-lg font-display italic">AB</span>
             </div>
             <span className="font-display text-xl md:text-2xl font-bold tracking-tighter uppercase whitespace-nowrap">
-              TIRE SERVICE <span className="text-primary">A & B</span>
+              TIRE SERVICE
             </span>
           </div>
 
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center space-x-8">
             {['Services', 'Reviews', 'Location', 'Contacts'].map((item) => {
-               // Mapping English keys to Bulgarian text for display, or just using direct text
-               const links: Record<string, string> = {
-                   'Services': 'Услуги',
-                   'Reviews': 'Отзиви',
-                   'Location': 'Локация',
-                   'Contacts': 'Контакти'
-               };
-               const hrefs: Record<string, string> = {
-                   'Services': '#services',
-                   'Reviews': '#reviews',
-                   'Location': '#location',
-                   'Contacts': '#contacts'
-               };
-               return (
+              // Mapping English keys to Bulgarian text for display, or just using direct text
+              const links: Record<string, string> = {
+                'Services': 'Услуги',
+                'Reviews': 'Отзиви',
+                'Location': 'Локация',
+                'Contacts': 'Контакти'
+              };
+              const hrefs: Record<string, string> = {
+                'Services': '#services',
+                'Reviews': '#reviews',
+                'Location': '#location',
+                'Contacts': '#contacts'
+              };
+              return (
                 <a
                   key={item}
                   href={hrefs[item]}
@@ -59,25 +59,25 @@ const Navbar: React.FC = () => {
             <button className="bg-primary hover:bg-orange-600 text-white px-6 py-3 font-bold text-sm transition-all transform active:scale-95 shadow-lg shadow-orange-500/20 uppercase whitespace-nowrap">
               ЗАПАЗИ ЧАС
             </button>
-            
+
             {/* Mobile Menu Button */}
-            <button 
-                onClick={toggleMenu}
-                className="lg:hidden p-2 text-secondary hover:text-primary transition-colors"
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden p-2 text-secondary hover:text-primary transition-colors"
             >
-                 <span className="material-symbols-outlined text-3xl">menu</span>
+              <span className="material-symbols-outlined text-3xl">menu</span>
             </button>
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-slate-100 px-4 py-4 space-y-4">
-            <a onClick={() => setIsMobileMenuOpen(false)} href="#services" className="block text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary">Услуги</a>
-            <a onClick={() => setIsMobileMenuOpen(false)} href="#reviews" className="block text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary">Отзиви</a>
-            <a onClick={() => setIsMobileMenuOpen(false)} href="#location" className="block text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary">Локация</a>
-            <a onClick={() => setIsMobileMenuOpen(false)} href="#contacts" className="block text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary">Контакти</a>
+          <a onClick={() => setIsMobileMenuOpen(false)} href="#services" className="block text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary">Услуги</a>
+          <a onClick={() => setIsMobileMenuOpen(false)} href="#reviews" className="block text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary">Отзиви</a>
+          <a onClick={() => setIsMobileMenuOpen(false)} href="#location" className="block text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary">Локация</a>
+          <a onClick={() => setIsMobileMenuOpen(false)} href="#contacts" className="block text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary">Контакти</a>
         </div>
       )}
     </nav>
